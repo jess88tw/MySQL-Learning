@@ -210,6 +210,7 @@ WHERE `emp_id` IN (
 );
 
 -- 使用 java jdbc 連接時, 也續會遇到驗證問題
+-- 選完資料庫後, 記得加上 ?characterEncoding=utf8
 select host,user,plugin,authentication_string from mysql.user;
 
 ALTER USER 'root'@'localhost' IDENTIFIED BY 'password' PASSWORD EXPIRE NEVER;
