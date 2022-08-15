@@ -208,3 +208,12 @@ WHERE `emp_id` IN (
 	FROM `works_with`
 	WHERE `total_sales` > 50000
 );
+
+-- 使用 java jdbc 連接時, 也續會遇到驗證問題
+select host,user,plugin,authentication_string from mysql.user;
+
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'password' PASSWORD EXPIRE NEVER;
+
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '123456';
+
+FLUSH PRIVILEGES;
